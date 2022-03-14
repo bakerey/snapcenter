@@ -50,10 +50,10 @@
   
   <link rel="stylesheet" href="/us-en/snapcenter/css/landing-page.css" type="text/css">
   <link rel="stylesheet" href="/us-en/snapcenter/css/tabbed-blocks.css" type="text/css">
-  <link rel="stylesheet" href='/us-en/snapcenter/css/product-family.css' type="text/css">
   <link rel='stylesheet' href='/us-en/snapcenter/css/na-feature.css' type='text/css'><script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-cookie/1.4.1/jquery.cookie.min.js"></script>
-  <!-- Used to import Promise for IE. Required for SearchKit -->
+
+  <!-- Used for Product Family Page Sidebar Visibility --><!-- Used to import Promise for IE. Required for SearchKit -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/bluebird/3.3.5/bluebird.min.js"></script><script src='/us-en/snapcenter/js/na-search.js'></script><script src='/us-en/snapcenter/js/na-pagenav.js'></script><link rel='stylesheet' href='/us-en/snapcenter/css/prism.css' type='text/css'>
   <link rel='stylesheet' href='/us-en/snapcenter/css/prism-netapp.css' type='text/css'>
 
@@ -131,7 +131,6 @@
   }
   </script>
   <script src='/us-en/snapcenter/js/version-dropdown.js'></script>
-  <script src='/us-en/snapcenter/js/product-family.js'></script>
   <script src='/us-en/snapcenter/js/FileSaver.min.js'></script>
   <script src='/us-en/snapcenter/js/jszip-utils.min.js'></script>
   <script src='/us-en/snapcenter/js/jszip.min.js'></script>
@@ -144,6 +143,43 @@
       <div class="n-off-canvas-menu__menu"><!--TODO: Add offcanvas code --></div>
       <div class="n-off-canvas-menu__content-wrap">
         <header class="site-header" id="banner">
+  
+  <!-- Start Page Toolbar -->
+  <div class="page-nav-toolbar">
+    <div id="version-dropdown"><div id="version-dropdown-ie-i18n">
+  <div id="version-dropdown-ie-i18n-menu">
+    <span class="ie-i18n-lang"><span class="version-title">SnapCenter Software </span><span class="version">4.6</span></span>
+    <span class="version-dropdown-caret"></span>
+  </div>
+  <div id="version-dropdown-n-property-navigation-bar__menu--language-selector" class="n-menu n-menu--v3 n-menu--is-active" style="display: none;">
+    <div class="n-language-selector-menu">
+      <ul class="n-menu__list">
+        <li class="n-menu__list-column">
+          <ul class="n-menu__list"><li class="n-menu__list-item n-menu__list-item--level-1"><a href="https://docs.netapp.com/us-en/snapcenter/protect-hana/task_restore_sap_hana_database_using_powershell_cmdlets.html" class="n-menu__header-text" target="_self">
+                <span translate="no" class="notranslate"><span>SnapCenter Software</span><span class="version"> 4.6</span></span>
+              </a></li><li class="n-menu__list-item n-menu__list-item--level-1"><a href="https://docs.netapp.com/us-en/snapcenter-45/protect-hana/task_restore_sap_hana_database_using_powershell_cmdlets.html" class="n-menu__header-text" target="_self">
+                <span translate="no" class="notranslate"><span>SnapCenter Software</span><span class="version"> 4.5</span></span>
+              </a></li></ul>
+        </li>
+      </ul>
+    </div>
+  </div>
+</div></div>
+    <div class="page-nav-contribute"  >
+      <a target="_blank" href="https://github.com/NetAppDocs/snapcenter/issues/new?body=Page%3A%20[Restore SAP HANA database using PowerShell cmdlets](https://docs.netapp.com/us-en/snapcenter/protect-hana/task_restore_sap_hana_database_using_powershell_cmdlets.html)" class="page-nav-contribute-link" role="button"><img src="/us-en/snapcenter/images/discuss-sm.svg" class="github-icon" />Request doc changes</a>
+      <a target="_blank" href="https://github.com/NetAppDocs/snapcenter/blob/main/protect-hana/task_restore_sap_hana_database_using_powershell_cmdlets.adoc" class="page-nav-contribute-link" role="button"><img src="/us-en/snapcenter/images/edit-sm.svg" class="github-icon" />Edit this page</a>
+      <a target="_blank" href="https://docs.netapp.com/us-en/contribute/" class="page-nav-contribute-link"  ><img src="/us-en/snapcenter/images/article-sm.svg" class="github-icon" />Learn how to contribute</a>
+    </div>
+    <div class="page-nav-container">
+      <nav class="page-nav-fixed">
+        <div class="page-nav-title">ON THIS PAGE</div>
+        <div class="page-nav-links">
+          <ul class="page-nav-inner" id="page-menu"></ul>
+        </div>
+      </nav>
+    </div>
+  </div>
+  
   <!-- Start top_hat -->
   <div class="n-top-hat">
     <div class="n-container">
@@ -2939,7 +2975,7 @@
         <div class="na-navbar-padding"> SnapCenter Server installation</div>
       </a>
       <ul><li class=" "><a class="na-navbar-padding" href="/us-en/snapcenter/install/install_workflow.html">
-        Install Workflow
+        Installation workflow
       </a></li><li class="subfolders "><a href="#">
         <div class="na-navbar-padding"> Prepare for installing the SnapCenter Server</div>
       </a>
@@ -3109,7 +3145,7 @@
         <div class="na-navbar-padding"> Prepare to install the SnapCenter Plug-in for Microsoft SQL Server</div>
       </a>
       <ul><li class=" "><a class="na-navbar-padding" href="/us-en/snapcenter/protect-scsql/task_install_snapcenter_plug_in_for_microsoft_sql_server_database.html">
-        Install workflow for SnapCenter Plug-in for Microsoft SQL Server
+        Installation workflow for SnapCenter Plug-in for Microsoft SQL Server
       </a></li><li class=" "><a class="na-navbar-padding" href="/us-en/snapcenter/protect-scsql/reference_prerequisites_to_adding_hosts_and_installing_snapcenter_plug_in_for_microsoft_sql_server.html">
         Prerequisites to add hosts and install SnapCenter Plug-in for Microsoft SQL Server
       </a></li><li class=" "><a class="na-navbar-padding" href="/us-en/snapcenter/protect-scsql/reference_host_requirements_to_install_snapcenter_plug_in_package_for_windows_sql.html">
@@ -3301,7 +3337,7 @@
         <div class="na-navbar-padding"> Prepare to install the SnapCenter Plug-in for SAP HANA Database</div>
       </a>
       <ul><li class=" "><a class="na-navbar-padding" href="/us-en/snapcenter/protect-hana/task_install_snapcenter_plug_in_for_sap_hana_database.html">
-        Install workflow for SnapCenter Plug-in for SAP HANA Database
+        Installation workflow of SnapCenter Plug-in for SAP HANA Database
       </a></li><li class=" "><a class="na-navbar-padding" href="/us-en/snapcenter/protect-hana/reference_prerequisites_to_adding_hosts_and_installing_snapcenter_plug_in_for_sap_hana_database.html">
         Prerequisites for adding hosts and installing SnapCenter Plug-in for SAP HANA Database
       </a></li><li class=" "><a class="na-navbar-padding" href="/us-en/snapcenter/protect-hana/reference_host_requirements_to_install_snapcenter_plug_in_package_for_windows_hana.html">
@@ -3438,7 +3474,7 @@
         <div class="na-navbar-padding"> Install SnapCenter Plug-in for Oracle Database</div>
       </a>
       <ul><li class=" "><a class="na-navbar-padding" href="/us-en/snapcenter/protect-sco/install-snapcenter-plug-in-for-oracle-workflow.html">
-        Install workflow of Plug-in for Oracle Database
+        Installation workflow of SnapCenter Plug-in for Oracle Database
       </a></li><li class=" "><a class="na-navbar-padding" href="/us-en/snapcenter/protect-sco/reference_prerequisites_for_adding_hosts_and_installing_snapcenter_plug_ins_package_for_linux_or_aix.html">
         Prerequisites for adding hosts and installing Plug-ins Package for Linux or AIX
       </a></li><li class=" "><a class="na-navbar-padding" href="/us-en/snapcenter/protect-sco/task_add_hosts_and_installing_the_snapcenter_plug_ins_package_for_linux_or_aix.html">
@@ -3580,7 +3616,7 @@
         <div class="na-navbar-padding"> Install SnapCenter Plug-in for Microsoft Windows</div>
       </a>
       <ul><li class=" "><a class="na-navbar-padding" href="/us-en/snapcenter/protect-scw/concept_install_snapcenter_plug_in_for_microsoft_windows.html">
-        Install workflow
+        Installation workflow of SnapCenter Plug-in for Microsoft Windows
       </a></li><li class=" "><a class="na-navbar-padding" href="/us-en/snapcenter/protect-scw/reference_installation_requirements_for_snapcenter_plug_in_for_microsoft_windows.html">
         Installation requirements for SnapCenter Plug-in for Microsoft Windows
       </a></li><li class=" "><a class="na-navbar-padding" href="/us-en/snapcenter/protect-scw/task_add_hosts_and_install_snapcenter_plug_in_for_microsoft_windows.html">
@@ -3683,7 +3719,7 @@
         <div class="na-navbar-padding"> Install SnapCenter Plug-in for Microsoft Exchange Server</div>
       </a>
       <ul><li class=" "><a class="na-navbar-padding" href="/us-en/snapcenter/protect-sce/concept_install_snapcenter_plug_in_for_microsoft_exchange_server.html">
-        Install workflow
+        Installation workflow of SnapCenter Plug-in for Microsoft Exchange Server
       </a></li><li class=" "><a class="na-navbar-padding" href="/us-en/snapcenter/protect-sce/reference_prerequisites_to_add_hosts_and_install_snapcenter_plug_in_for_microsoft_exchange_server.html">
         Prerequisites to add hosts and install SnapCenter Plug-in for Microsoft Exchange Server
       </a></li><li class=" "><a class="na-navbar-padding" href="/us-en/snapcenter/protect-sce/task_set_up_credentials_for_the_snapcenter_plug_in_for_windows_sce.html">
@@ -3743,7 +3779,7 @@
       </a></li><li class=" "><a class="na-navbar-padding" href="/us-en/snapcenter/protect-sce/task_remove_exchange_backups_using_powershell_cmdlets.html">
         Remove Exchange backups using PowerShell cmdlets
       </a></li><li class=" "><a class="na-navbar-padding" href="/us-en/snapcenter/protect-sce/task_view_exchange_backups_in_the_topology_page.html">
-        View Exchange backups on the Topology page
+        View Exchange backups in the Topology page
       </a></li></ul></li><li class="subfolders "><a href="#">
         <div class="na-navbar-padding"> Restore Exchange resources</div>
       </a>
@@ -3813,7 +3849,7 @@
         <div class="na-navbar-padding"> Prepare to install SnapCenter Custom Plug-ins</div>
       </a>
       <ul><li class=" "><a class="na-navbar-padding" href="/us-en/snapcenter/protect-scc/task_install_snapcenter_custom_plug_in.html">
-        Install workflow for SnapCenter Custom Plug-ins
+        Installation workflow of SnapCenter Custom Plug-ins
       </a></li><li class=" "><a class="na-navbar-padding" href="/us-en/snapcenter/protect-scc/reference_prerequisites_to_adding_hosts_and_installing_snapcenter_custom_plug_ins.html">
         Prerequisites for adding hosts and installing SnapCenter Custom Plug-ins
       </a></li><li class=" "><a class="na-navbar-padding" href="/us-en/snapcenter/protect-scc/reference_host_requirements_to_install_snapcenter_plug_in_package_for_windows_scc.html">
@@ -4029,19 +4065,16 @@
     <div class="n-breadcrumb">
       <ul class="n-breadcrumb__list">
         <li class="n-breadcrumb__list-item">
-          <a href="https://www.netapp.com">Home</a>
+          <a href="https://docs.netapp.com">docs.netapp.com</a>
         </li>
-        <li class="n-breadcrumb__list-item">
-          <a href="https://docs.netapp.com">Documentation</a>
-        </li>
+        
+
         
 
         <li class="n-breadcrumb__list-item">
           <a href="/us-en/snapcenter/">SnapCenter&nbsp;Software&nbsp;4.6</a>
         </li>
-        <li class="n-breadcrumb__list-item">
-          Restore SAP HANA database using PowerShell cmdlets
-        </li>
+
       </ul>
     </div>
     <div style="clear: both"></div><!-- Main needs to have height -->
@@ -4056,7 +4089,7 @@
 <p class="page-details">
   
     
-    <time datetime="2022-03-09 09:25:53 +0000">03/09/2022</time>
+    <time datetime="2022-03-14 20:08:35 +0000">03/14/2022</time>
     
   
 
@@ -4089,7 +4122,6 @@
 
 
 </p>
-
 
 <div class="paragraph lead">
 <p>Restoring a SAP HANA database backup includes initiating a connection session with the SnapCenter Server, listing the backups and retrieving backup information, and restoring a backup.</p>
@@ -4220,43 +4252,6 @@ AppObjectId is "Host\Plugin\UID", where UID = SID is for single container type r
     <!-- Page Container -->
   </div>
 
-  
-  <!-- Start Page Toolbar -->
-  <div class="page-nav-toolbar">
-    <div id="version-dropdown"><div id="version-dropdown-ie-i18n">
-  <div id="version-dropdown-ie-i18n-menu">
-    <span class="ie-i18n-lang"><span class="version-title">SnapCenter Software </span><span class="version">4.6</span></span>
-    <span class="version-dropdown-caret"></span>
-  </div>
-  <div id="version-dropdown-n-property-navigation-bar__menu--language-selector" class="n-menu n-menu--v3 n-menu--is-active" style="display: none;">
-    <div class="n-language-selector-menu">
-      <ul class="n-menu__list">
-        <li class="n-menu__list-column">
-          <ul class="n-menu__list"><li class="n-menu__list-item n-menu__list-item--level-1"><a href="https://docs.netapp.com/us-en/snapcenter/protect-hana/task_restore_sap_hana_database_using_powershell_cmdlets.html" class="n-menu__header-text" target="_blank">
-                <span translate="no" class="notranslate"><span>SnapCenter Software</span><span class="version"> 4.6</span></span>
-              </a></li><li class="n-menu__list-item n-menu__list-item--level-1"><a href="https://docs.netapp.com/us-en/snapcenter-45/protect-hana/task_restore_sap_hana_database_using_powershell_cmdlets.html" class="n-menu__header-text" target="_blank">
-                <span translate="no" class="notranslate"><span>SnapCenter Software</span><span class="version"> 4.5</span></span>
-              </a></li></ul>
-        </li>
-      </ul>
-    </div>
-  </div>
-</div></div>
-    <div class="page-nav-contribute"  >
-      <a target="_blank" href="https://github.com/NetAppDocs/snapcenter/issues/new?body=Page%3A%20[Restore SAP HANA database using PowerShell cmdlets](https://docs.netapp.com/us-en/snapcenter/protect-hana/task_restore_sap_hana_database_using_powershell_cmdlets.html)" class="page-nav-contribute-link" role="button"><img src="/us-en/snapcenter/images/discuss-sm.svg" class="github-icon" />Request doc changes</a>
-      <a target="_blank" href="https://github.com/NetAppDocs/snapcenter/blob/main/protect-hana/task_restore_sap_hana_database_using_powershell_cmdlets.adoc" class="page-nav-contribute-link" role="button"><img src="/us-en/snapcenter/images/edit-sm.svg" class="github-icon" />Edit this page</a>
-      <a target="_blank" href="https://docs.netapp.com/us-en/contribute/" class="page-nav-contribute-link"  ><img src="/us-en/snapcenter/images/article-sm.svg" class="github-icon" />Learn how to contribute</a>
-    </div>
-    <div class="page-nav-container">
-      <nav class="page-nav-fixed">
-        <div class="page-nav-title">ON THIS PAGE</div>
-        <div class="page-nav-links">
-          <ul class="page-nav-inner" id="page-menu"></ul>
-        </div>
-      </nav>
-    </div>
-  </div>
-  
   <div style="clear: both"></div><!-- Main needs to have height --></div>
 
         </main>
