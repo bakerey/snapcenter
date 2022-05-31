@@ -4357,19 +4357,11 @@
 <p class="page-details">
   
     
-    <time datetime="2021-12-07 17:36:32 +0000">12/07/2021</time>
+    <time datetime="2022-05-31 06:30:14 +0000">05/31/2022</time>
     
   
 
 <span>Contributors
-  <a target="_blank" class="ext-link-indicator" href="https://github.com/netapp-soumikd">
-    <img  class="avatar avatar-small"
-          alt="netapp-soumikd"
-          width="20" height="20"
-          src="https://avatars.githubusercontent.com/u/64966556?v=4"
-          style="border-radius: 50%;"/>
-  </a>
-  
 </span>
 
 
@@ -4428,19 +4420,19 @@ You should repeat this command for each permission.
 <div class="ulist">
 <ul>
 <li>
-<p>'security login role create -role SVM_SVM_Role_Name -cmddirname "snapmirror list-destinations" -vserver SVM_Name -access all'</p>
+<p><code>security login role create -role SVM_Role_Name -cmddirname "snapmirror list-destinations" -vserver SVM_Name -access all</code></p>
 </li>
 <li>
-<p>'security login role create -role SVM_SVM_Role_Name -cmddirname "event generate-autosupport-log" -vserver SVM_Name -access all'</p>
+<p><code>security login role create -role SVM_Role_Name -cmddirname "event generate-autosupport-log" -vserver SVM_Name -access all</code></p>
 </li>
 <li>
-<p>'security login role create -vserver SVM_Name -role SVM_SVM_Role_Name -cmddirname "job history show" -access all'</p>
+<p><code>security login role create -vserver SVM_Name -role SVM_Role_Name -cmddirname "job history show" -access all</code></p>
 </li>
 <li>
-<p>'security login role create -vserver SVM_Name -role SVM_SVM_Role_Name -cmddirname "job stop" -access all'</p>
+<p><code>security login role create -vserver SVM_Name -role SVM_Role_Name -cmddirname "job stop" -access all</code></p>
 </li>
 <li>
-<p>'security login role create -vserver SVM_Name -role SVM_SVM_SVM_Role_Name -cmddirname "lun" -access all'</p>
+<p><code>security login role create -vserver SVM_Name -role SVM_Role_Name -cmddirname "lun" -access all</code></p>
 </li>
 <li>
 <p><code>security login role create -vserver SVM_name -role SVM_Role_Name -cmddirname "lun create" -access all</code></p>
@@ -4467,7 +4459,7 @@ You should repeat this command for each permission.
 <p><code>security login role create -vserver SVM_name -role SVM_Role_Name -cmddirname "lun mapping add-reporting-nodes" -access all</code></p>
 </li>
 <li>
-<p>'security login role create -vserver SVM_Name -role SVM_SVM_Role_Name -cmddirname "lun mapping create" -access all'</p>
+<p><code>security login role create -vserver SVM_Name -role SVM_Role_Name -cmddirname "lun mapping create" -access all</code></p>
 </li>
 <li>
 <p><code>security login role create -vserver SVM_name -role SVM_Role_Name -cmddirname "lun mapping delete" -access all</code></p>
@@ -4500,7 +4492,7 @@ You should repeat this command for each permission.
 <p><code>security login role create -vserver SVM_name -role SVM_Role_Name -cmddirname "lun show" -access all</code></p>
 </li>
 <li>
-<p>`security login role create -vserver SVM_Name -role SVM_SVM_Role_Name -cmddirname "network interface" -access readonly'</p>
+<p><code>security login role create -vserver SVM_Name -role SVM_Role_Name -cmddirname "network interface" -access readonly</code></p>
 </li>
 <li>
 <p><code>security login role create -vserver SVM_name -role SVM_Role_Name -cmddirname "snapmirror policy add-rule" -access all</code></p>
@@ -4629,8 +4621,10 @@ You should repeat this command for each permission.
 <p><code>security login role create -vserver SVM_name -role SVM_Role_Name -cmddirname "vserver export-policy rule show" -access all</code></p>
 </li>
 <li>
-<p><code>security login role create -vserver SVM_name -role SVM_Role_Name -cmddirname "vserver export-policy show" -access all</code>
-*'security login role create -vserver SVM_Name -role SVM_SVM_Role_Name -cmddirname "vserver iscsi connection show" -access all'</p>
+<p><code>security login role create -vserver SVM_name -role SVM_Role_Name -cmddirname "vserver export-policy show" -access all</code></p>
+</li>
+<li>
+<p><code>security login role create -vserver SVM_Name -role SVM_Role_Name -cmddirname "vserver iscsi connection show" -access all</code></p>
 </li>
 <li>
 <p><code>security login role create -vserver SVM_name -role SVM_Role_Name -cmddirname "vserver" -access readonly</code></p>
@@ -4642,7 +4636,7 @@ You should repeat this command for each permission.
 <p><code>security login role create -vserver SVM_name -role SVM_Role_Name -cmddirname "vserver iscsi" -access all</code></p>
 </li>
 <li>
-<p>'security login role create -vserver SVM_Name -role SVM_SVM_Role_Name -cmddirname "volume clone split status" -access all'</p>
+<p><code>security login role create -vserver SVM_Name -role SVM_Role_Name -cmddirname "volume clone split status" -access all</code></p>
 </li>
 </ul>
 </div>
