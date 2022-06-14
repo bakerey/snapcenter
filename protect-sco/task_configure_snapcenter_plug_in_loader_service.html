@@ -301,35 +301,27 @@
     </div>
   </div>
   <div class="n-property-bar__toolbar">
-    <!-- Start Language Selector --><div id="ie-i18n" class="n-property-bar__lang-selector">
-      <div id="ie-i18n-menu">
-      <span class="ie-i18n-lang">English</span>
-        <button class="ie-i18n-icon-container" type="button">
+    <!-- Start Language Selector --><div id="language-dropdown" class="custom-dropdown custom-dropdown-lang">
+      <div class="custom-dropdown-select custom-dropdown-select-lang">
+      <span class="lang-name">English</span>
           <svg class="n-globe__icon" aria-labelledby="title">
             <title>globe</title>
             <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/us-en/snapcenter/common/svg/sprite.svg#globe"></use>
           </svg>
         </button>
       </div>
-      <div id="n-property-navigation-bar__menu--language-selector" class="ie-i18n-results-container n-menu n-menu--v3 n-menu--is-active" style="display: none;">
-        <div class="n-language-selector-menu">
-          <ul class="n-menu__list">
-            <li class="n-menu__list-column">
-              <ul class="n-menu__list"><li class="n-menu__list-item n-menu__list-item--level-1">
-                  <a href="https://docs.netapp.com/us-en/snapcenter/protect-sco/task_configure_snapcenter_plug_in_loader_service.html" class="n-menu__header-text"><span translate="no" class="notranslate">English</span></a>
-                </li><li class="n-menu__list-item n-menu__list-item--level-1">
-                  <a href="https://docs.netapp.com/ja-jp/snapcenter/protect-sco/task_configure_snapcenter_plug_in_loader_service.html" class="n-menu__header-text"><span translate="no" class="notranslate">日本語</span></a>
-                </li><li class="n-menu__list-item n-menu__list-item--level-1">
-                  <a href="https://docs.netapp.com/ko-kr/snapcenter/protect-sco/task_configure_snapcenter_plug_in_loader_service.html" class="n-menu__header-text"><span translate="no" class="notranslate">한국어</span></a>
-                </li><li class="n-menu__list-item n-menu__list-item--level-1">
-                  <a href="https://docs.netapp.com/zh-cn/snapcenter/protect-sco/task_configure_snapcenter_plug_in_loader_service.html" class="n-menu__header-text"><span translate="no" class="notranslate">简体中文</span></a>
-                </li><li class="n-menu__list-item n-menu__list-item--level-1">
-                  <a href="https://docs.netapp.com/zh-tw/snapcenter/protect-sco/task_configure_snapcenter_plug_in_loader_service.html" class="n-menu__header-text"><span translate="no" class="notranslate">繁體中文</span></a>
-                </li></ul>
-            </li>
-          </ul>
-        </div>
-      </div>
+
+      <ul class="custom-dropdown-menu"><li>
+          <a href="https://docs.netapp.com/us-en/snapcenter/protect-sco/task_configure_snapcenter_plug_in_loader_service.html" target="_self"><span translate="no" class="notranslate">English</span></a>
+        </li><li>
+          <a href="https://docs.netapp.com/ja-jp/snapcenter/protect-sco/task_configure_snapcenter_plug_in_loader_service.html" target="_self"><span translate="no" class="notranslate">日本語</span></a>
+        </li><li>
+          <a href="https://docs.netapp.com/zh-cn/snapcenter/protect-sco/task_configure_snapcenter_plug_in_loader_service.html" target="_self"><span translate="no" class="notranslate">简体中文</span></a>
+        </li><li>
+          <a href="https://docs.netapp.com/zh-tw/snapcenter/protect-sco/task_configure_snapcenter_plug_in_loader_service.html" target="_self"><span translate="no" class="notranslate">繁體中文</span></a>
+        </li><li>
+          <a href="https://docs.netapp.com/ko-kr/snapcenter/protect-sco/task_configure_snapcenter_plug_in_loader_service.html" target="_self"><span translate="no" class="notranslate">한국어</span></a>
+        </li></ul>
     </div><!-- End Language Selector -->
 
     <div class="n-property-bar__cta"></div>
@@ -3205,7 +3197,7 @@
     $("#toggleContainerPdf").toggle('display');
     $(".n-pdf-body-container .zip-pdf-link-container").toggle('display');
   });
-</script><div class="sidebar-nav-container">
+</script><div class="sidebar-nav-container" id="mysidebardiv">
   <ul id="mysidebar" class="nav"><li class=" "><a class="na-navbar-padding" href="/us-en/snapcenter/index.html">
         SnapCenter Software 4.6 docs
       </a></li><li class=" "><a class="na-navbar-padding" href="/us-en/snapcenter/release-notes.html">
@@ -4357,11 +4349,19 @@
 <p class="page-details">
   
     
-    <time datetime="2021-06-16 19:45:49 +0000">06/16/2021</time>
+    <time datetime="2022-06-14 06:33:10 +0000">06/14/2022</time>
     
   
 
 <span>Contributors
+  <a target="_blank" class="ext-link-indicator" href="https://github.com/netapp-soumikd">
+    <img  class="avatar avatar-small"
+          alt="netapp-soumikd"
+          width="20" height="20"
+          src="https://avatars.githubusercontent.com/u/64966556?v=4"
+          style="border-radius: 50%;"/>
+  </a>
+  
   <a target="_blank" class="ext-link-indicator" href="https://github.com/netapp-asubhas">
     <img  class="avatar avatar-small"
           alt="netapp-asubhas"
@@ -4513,7 +4513,7 @@ You should not change the value after installing the plug-ins.
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
-<p>SPL_LOGS_MAX_COUNT</p>
+<p>LOGS_MAX_COUNT</p>
 </div></div></td>
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
 <p>Displays the number of SnapCenter Plug-in Loader log files that are retained in the <em>/custom_location/snapcenter/spl/logs</em> folder.</p>
@@ -4543,6 +4543,36 @@ If you manually delete the spl.properties file, then the number of files to be r
 </div>
 <div class="paragraph">
 <p>This path is determined during installation and as part of starting SPL.</p>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>LOG_MAX_SIZE</p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>Displays the maximum size of the job log file.</p>
+</div>
+<div class="paragraph">
+<p>Once the maximum size is reached, the log file is zipped, and the logs are written into the new file of that job.</p>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>RETAIN_LOGS_OF_LAST_DAYS</p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>Displays the number of days up to which the logs are retained.</p>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>ENABLE_CERTIFICATE_VALIDATION</p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>Displays true when CA certificate validation is enabled for the host.</p>
+</div>
+<div class="paragraph">
+<p>You can enable or disable this parameter either by editing the <strong>spl.properties</strong> file or by using the SnapCenter GUI or cmdlet.</p>
 </div></div></td>
 </tr>
 </tbody>
@@ -4762,4 +4792,5 @@ You can use the -force option with the stop command to stop the SnapCenter Plug-
     </script>
     <script src='/us-en/snapcenter/js/www-ntap.js'></script>
     <script src='/us-en/snapcenter/js/tabbed-blocks.js'></script>
+    <script src='/us-en/snapcenter/js/sidebar.js'></script>
   </body></html>
