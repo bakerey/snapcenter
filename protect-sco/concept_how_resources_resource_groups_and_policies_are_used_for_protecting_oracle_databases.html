@@ -143,6 +143,17 @@
               $("#mysidebar").navgoco('toggle', true);
           });
 
+          $(".sidebar-nav-container").on("scroll", function() {
+            $.cookie("sidebarScroll", $(".sidebar-nav-container").scrollTop(), {
+              path    : "/us-en/snapcenter"  
+            });
+          });
+          $(function() {
+            if ($.cookie("sidebarScroll")) {
+              $(".sidebar-nav-container").scrollTop($.cookie("sidebarScroll"));
+            }
+          });
+
       });
 
   </script>
@@ -287,6 +298,8 @@
         </a>
       </div>
 
+      
+      
       
       <div class="search-property-bar">
         <div id="search-demo-container" class="searchbox n-property-bar__search">
@@ -3041,7 +3054,7 @@
     ><a href="#">
         <div class="na-navbar-padding"> Concepts</div>
       </a>
-      <ul>
+      <ul style="display: none;">
         <li 
       data-pdf-exists="true" 
       data-pdf-filename="SnapCenter overview"
@@ -3064,7 +3077,7 @@
     ><a href="#">
         <div class="na-navbar-padding"> SnapCenter role-based access control (RBAC)</div>
       </a>
-      <ul>
+      <ul style="display: none;">
         <li 
       data-pdf-exists="true" 
       data-pdf-filename="Types of RBAC"
@@ -3122,7 +3135,7 @@
     ><a href="#">
         <div class="na-navbar-padding"> SnapCenter Server installation</div>
       </a>
-      <ul>
+      <ul style="display: none;">
         <li 
       data-pdf-exists="true" 
       data-pdf-filename="Installation workflow"
@@ -3138,7 +3151,7 @@
     ><a href="#">
         <div class="na-navbar-padding"> Prepare for installing the SnapCenter Server</div>
       </a>
-      <ul>
+      <ul style="display: none;">
         <li 
       data-pdf-exists="true" 
       data-pdf-filename="Domain and workgroup requirements"
@@ -3231,7 +3244,7 @@
     ><a href="#">
         <div class="na-navbar-padding"> Configure CA Certificate</div>
       </a>
-      <ul>
+      <ul style="display: none;">
         <li 
       data-pdf-exists="true" 
       data-pdf-filename="Generate CA Certificate CSR file"
@@ -3282,7 +3295,7 @@
     ><a href="#">
         <div class="na-navbar-padding"> Configure Active Directory, LDAP, and LDAPS</div>
       </a>
-      <ul>
+      <ul style="display: none;">
         <li 
       data-pdf-exists="true" 
       data-pdf-filename="Register untrusted Active Directory domains"
@@ -3305,7 +3318,7 @@
     ><a href="#">
         <div class="na-navbar-padding"> Configure High Availability</div>
       </a>
-      <ul>
+      <ul style="display: none;">
         <li 
       data-pdf-exists="true" 
       data-pdf-filename="Configure SnapCenter Servers for High Availability using F5"
@@ -3349,7 +3362,7 @@
     ><a href="#">
         <div class="na-navbar-padding"> Configure role-based access control (RBAC)</div>
       </a>
-      <ul>
+      <ul style="display: none;">
         <li 
       data-pdf-exists="true" 
       data-pdf-filename="Add a user or group and assign role and assets"
@@ -3421,7 +3434,7 @@
     ><a href="#">
         <div class="na-navbar-padding"> Provision your storage system</div>
       </a>
-      <ul>
+      <ul style="display: none;">
         <li 
       data-pdf-exists="true" 
       data-pdf-filename="Provision storage on Windows hosts"
@@ -3430,7 +3443,7 @@
     ><a href="#">
         <div class="na-navbar-padding"> Provision storage on Windows hosts</div>
       </a>
-      <ul>
+      <ul style="display: none;">
         <li 
       data-pdf-exists="true" 
       data-pdf-filename="Configure LUN storage"
@@ -3502,7 +3515,7 @@
     ><a href="#">
         <div class="na-navbar-padding"> Protect Microsoft SQL Server databases</div>
       </a>
-      <ul>
+      <ul style="display: none;">
         <li 
       data-pdf-exists="true" 
       data-pdf-filename="SnapCenter Plug-in for Microsoft SQL Server"
@@ -3511,7 +3524,7 @@
     ><a href="#">
         <div class="na-navbar-padding"> SnapCenter Plug-in for Microsoft SQL Server</div>
       </a>
-      <ul>
+      <ul style="display: none;">
         <li 
       data-pdf-exists="true" 
       data-pdf-filename="SnapCenter Plug-in for Microsoft SQL Server overview"
@@ -3576,7 +3589,7 @@
     ><a href="#">
         <div class="na-navbar-padding"> Backup strategy for SQL Server resources</div>
       </a>
-      <ul>
+      <ul style="display: none;">
         <li 
       data-pdf-exists="true" 
       data-pdf-filename="Define a backup strategy for SQL Server resources"
@@ -3655,7 +3668,7 @@
     ><a href="#">
         <div class="na-navbar-padding"> Restoration strategy for SQL Server</div>
       </a>
-      <ul>
+      <ul style="display: none;">
         <li 
       data-pdf-exists="true" 
       data-pdf-filename="Define a restoration strategy for SQL Server"
@@ -3706,7 +3719,7 @@
     ><a href="#">
         <div class="na-navbar-padding"> Prepare to install the SnapCenter Plug-in for Microsoft SQL Server</div>
       </a>
-      <ul>
+      <ul style="display: none;">
         <li 
       data-pdf-exists="true" 
       data-pdf-filename="Installation workflow for SnapCenter Plug-in for Microsoft SQL Server"
@@ -3757,7 +3770,7 @@
     ><a href="#">
         <div class="na-navbar-padding"> Install SnapCenter Plug-in for Microsoft SQL Server</div>
       </a>
-      <ul>
+      <ul style="display: none;">
         <li 
       data-pdf-exists="true" 
       data-pdf-filename="Add hosts and install the SnapCenter Plug-ins Package for Windows"
@@ -3794,7 +3807,7 @@
     ><a href="#">
         <div class="na-navbar-padding"> Configure CA Certificate</div>
       </a>
-      <ul>
+      <ul style="display: none;">
         <li 
       data-pdf-exists="true" 
       data-pdf-filename="Generate CA Certificate CSR file"
@@ -3838,7 +3851,7 @@
     ><a href="#">
         <div class="na-navbar-padding"> Configure Disaster recovery</div>
       </a>
-      <ul>
+      <ul style="display: none;">
         <li 
       data-pdf-exists="true" 
       data-pdf-filename="Disaster recovery of SnapCenter Plug-in for SQL Server"
@@ -3875,7 +3888,7 @@
     ><a href="#">
         <div class="na-navbar-padding"> Prepare for data protection</div>
       </a>
-      <ul>
+      <ul style="display: none;">
         <li 
       data-pdf-exists="true" 
       data-pdf-filename="Prerequisites for using SnapCenter Plug-in for Microsoft SQL Server"
@@ -3898,7 +3911,7 @@
     ><a href="#">
         <div class="na-navbar-padding"> Back up SQL Server database, or instance, or availability group</div>
       </a>
-      <ul>
+      <ul style="display: none;">
         <li 
       data-pdf-exists="true" 
       data-pdf-filename="Backup workflow"
@@ -3963,7 +3976,7 @@
     ><a href="#">
         <div class="na-navbar-padding"> Monitor backup operations</div>
       </a>
-      <ul>
+      <ul style="display: none;">
         <li 
       data-pdf-exists="true" 
       data-pdf-filename="Monitor backup operations in the SnapCenter Jobs page"
@@ -4028,7 +4041,7 @@
     ><a href="#">
         <div class="na-navbar-padding"> Restore SQL Server resources</div>
       </a>
-      <ul>
+      <ul style="display: none;">
         <li 
       data-pdf-exists="true" 
       data-pdf-filename="Restore workflow"
@@ -4093,7 +4106,7 @@
     ><a href="#">
         <div class="na-navbar-padding"> Clone SQL Server database resources</div>
       </a>
-      <ul>
+      <ul style="display: none;">
         <li 
       data-pdf-exists="true" 
       data-pdf-filename="Clone workflow"
@@ -4151,7 +4164,7 @@
     ><a href="#">
         <div class="na-navbar-padding"> Protect SAP HANA databases</div>
       </a>
-      <ul>
+      <ul style="display: none;">
         <li 
       data-pdf-exists="true" 
       data-pdf-filename="SnapCenter Plug-in for SAP HANA Databases"
@@ -4160,7 +4173,7 @@
     ><a href="#">
         <div class="na-navbar-padding"> SnapCenter Plug-in for SAP HANA Databases</div>
       </a>
-      <ul>
+      <ul style="display: none;">
         <li 
       data-pdf-exists="true" 
       data-pdf-filename="SnapCenter Plug-in for SAP HANA Database overview"
@@ -4211,7 +4224,7 @@
     ><a href="#">
         <div class="na-navbar-padding"> Backup strategy for SAP HANA databases</div>
       </a>
-      <ul>
+      <ul style="display: none;">
         <li 
       data-pdf-exists="true" 
       data-pdf-filename="Define a backup strategy for SAP HANA databases"
@@ -4276,7 +4289,7 @@
     ><a href="#">
         <div class="na-navbar-padding"> Restore and recovery strategy for SAP HANA databases</div>
       </a>
-      <ul>
+      <ul style="display: none;">
         <li 
       data-pdf-exists="true" 
       data-pdf-filename="Define a restore and recovery strategy for SAP HANA resources"
@@ -4320,7 +4333,7 @@
     ><a href="#">
         <div class="na-navbar-padding"> Prepare to install the SnapCenter Plug-in for SAP HANA Database</div>
       </a>
-      <ul>
+      <ul style="display: none;">
         <li 
       data-pdf-exists="true" 
       data-pdf-filename="Installation workflow of SnapCenter Plug-in for SAP HANA Database"
@@ -4371,7 +4384,7 @@
     ><a href="#">
         <div class="na-navbar-padding"> Install the SnapCenter Plug-in for SAP HANA Databases</div>
       </a>
-      <ul>
+      <ul style="display: none;">
         <li 
       data-pdf-exists="true" 
       data-pdf-filename="Add hosts and install plug-in packages on remote hosts"
@@ -4408,7 +4421,7 @@
     ><a href="#">
         <div class="na-navbar-padding"> Configure CA Certificate</div>
       </a>
-      <ul>
+      <ul style="display: none;">
         <li 
       data-pdf-exists="true" 
       data-pdf-filename="Generate CA Certificate CSR file"
@@ -4473,7 +4486,7 @@
     ><a href="#">
         <div class="na-navbar-padding"> Prepare for data protection</div>
       </a>
-      <ul>
+      <ul style="display: none;">
         <li 
       data-pdf-exists="true" 
       data-pdf-filename="Prerequisites for using the SnapCenter Plug-in for SAP HANA Database"
@@ -4496,7 +4509,7 @@
     ><a href="#">
         <div class="na-navbar-padding"> Back up SAP HANA resources</div>
       </a>
-      <ul>
+      <ul style="display: none;">
         <li 
       data-pdf-exists="true" 
       data-pdf-filename="Back up workflow"
@@ -4519,7 +4532,7 @@
     ><a href="#">
         <div class="na-navbar-padding"> Discover resources and prepare multitenant database containers for data protection</div>
       </a>
-      <ul>
+      <ul style="display: none;">
         <li 
       data-pdf-exists="true" 
       data-pdf-filename="Discover the databases automatically"
@@ -4591,7 +4604,7 @@
     ><a href="#">
         <div class="na-navbar-padding"> Monitor backup operations</div>
       </a>
-      <ul>
+      <ul style="display: none;">
         <li 
       data-pdf-exists="true" 
       data-pdf-filename="Monitor backup operations in the SnapCenter Jobs page"
@@ -4628,7 +4641,7 @@
     ><a href="#">
         <div class="na-navbar-padding"> Restore SAP HANA Databases</div>
       </a>
-      <ul>
+      <ul style="display: none;">
         <li 
       data-pdf-exists="true" 
       data-pdf-filename="Restore workflow"
@@ -4679,7 +4692,7 @@
     ><a href="#">
         <div class="na-navbar-padding"> Clone SAP HANA resource backups</div>
       </a>
-      <ul>
+      <ul style="display: none;">
         <li 
       data-pdf-exists="true" 
       data-pdf-filename="Clone workflow"
@@ -4730,7 +4743,7 @@
     ><a href="#">
         <div class="na-navbar-padding"> Protect Oracle databases</div>
       </a>
-      <ul>
+      <ul style="display: none;">
         <li 
       data-pdf-exists="true" 
       data-pdf-filename="Overview of SnapCenter Plug-in for Oracle Database"
@@ -4739,7 +4752,7 @@
     ><a href="#">
         <div class="na-navbar-padding"> Overview of SnapCenter Plug-in for Oracle Database</div>
       </a>
-      <ul>
+      <ul style="display: none;">
         <li 
       data-pdf-exists="true" 
       data-pdf-filename="What can you do with the Plug-in for Oracle Database"
@@ -4783,7 +4796,7 @@
     ><a href="#">
         <div class="na-navbar-padding"> Install SnapCenter Plug-in for Oracle Database</div>
       </a>
-      <ul>
+      <ul style="display: none;">
         <li 
       data-pdf-exists="true" 
       data-pdf-filename="Installation workflow of SnapCenter Plug-in for Oracle Database"
@@ -4862,7 +4875,7 @@
     ><a href="#">
         <div class="na-navbar-padding"> Back up Oracle databases</div>
       </a>
-      <ul>
+      <ul style="display: none;">
         <li 
       data-pdf-exists="true" 
       data-pdf-filename="Backup workflow"
@@ -4969,7 +4982,7 @@
     ><a href="#">
         <div class="na-navbar-padding"> Restore and recover Oracle databases</div>
       </a>
-      <ul>
+      <ul style="display: none;">
         <li 
       data-pdf-exists="true" 
       data-pdf-filename="Restore workflow"
@@ -5048,7 +5061,7 @@
     ><a href="#">
         <div class="na-navbar-padding"> Clone Oracle database</div>
       </a>
-      <ul>
+      <ul style="display: none;">
         <li 
       data-pdf-exists="true" 
       data-pdf-filename="Clone workflow"
@@ -5141,7 +5154,7 @@
     ><a href="#">
         <div class="na-navbar-padding"> Manage application volumes</div>
       </a>
-      <ul>
+      <ul style="display: none;">
         <li 
       data-pdf-exists="true" 
       data-pdf-filename="Add application volumes"
@@ -5157,7 +5170,7 @@
     ><a href="#">
         <div class="na-navbar-padding"> Backup application volumes</div>
       </a>
-      <ul>
+      <ul style="display: none;">
         <li 
       data-pdf-exists="true" 
       data-pdf-filename="Back up application volume"
@@ -5187,7 +5200,7 @@
     ><a href="#">
         <div class="na-navbar-padding"> Protect Windows file systems</div>
       </a>
-      <ul>
+      <ul style="display: none;">
         <li 
       data-pdf-exists="true" 
       data-pdf-filename="SnapCenter Plug-in for Microsoft Windows concepts"
@@ -5196,7 +5209,7 @@
     ><a href="#">
         <div class="na-navbar-padding"> SnapCenter Plug-in for Microsoft Windows concepts</div>
       </a>
-      <ul>
+      <ul style="display: none;">
         <li 
       data-pdf-exists="true" 
       data-pdf-filename="SnapCenter Plug-in for Microsoft Windows overview"
@@ -5268,7 +5281,7 @@
     ><a href="#">
         <div class="na-navbar-padding"> Install SnapCenter Plug-in for Microsoft Windows</div>
       </a>
-      <ul>
+      <ul style="display: none;">
         <li 
       data-pdf-exists="true" 
       data-pdf-filename="Installation workflow of SnapCenter Plug-in for Microsoft Windows"
@@ -5326,7 +5339,7 @@
     ><a href="#">
         <div class="na-navbar-padding"> Configure CA certificate</div>
       </a>
-      <ul>
+      <ul style="display: none;">
         <li 
       data-pdf-exists="true" 
       data-pdf-filename="Generate CA Certificate CSR file"
@@ -5377,7 +5390,7 @@
     ><a href="#">
         <div class="na-navbar-padding"> Back up Windows file systems</div>
       </a>
-      <ul>
+      <ul style="display: none;">
         <li 
       data-pdf-exists="true" 
       data-pdf-filename="Backup workflow"
@@ -5477,7 +5490,7 @@
     ><a href="#">
         <div class="na-navbar-padding"> Restore Windows file systems</div>
       </a>
-      <ul>
+      <ul style="display: none;">
         <li 
       data-pdf-exists="true" 
       data-pdf-filename="Restore Windows file system backups"
@@ -5514,7 +5527,7 @@
     ><a href="#">
         <div class="na-navbar-padding"> Clone Windows file systems</div>
       </a>
-      <ul>
+      <ul style="display: none;">
         <li 
       data-pdf-exists="true" 
       data-pdf-filename="Clone from a Windows file system backup"
@@ -5558,7 +5571,7 @@
     ><a href="#">
         <div class="na-navbar-padding"> Protect Microsoft Exchange Server databases</div>
       </a>
-      <ul>
+      <ul style="display: none;">
         <li 
       data-pdf-exists="true" 
       data-pdf-filename="SnapCenter Plug-in for Microsoft Exchange Server concepts"
@@ -5567,7 +5580,7 @@
     ><a href="#">
         <div class="na-navbar-padding"> SnapCenter Plug-in for Microsoft Exchange Server concepts</div>
       </a>
-      <ul>
+      <ul style="display: none;">
         <li 
       data-pdf-exists="true" 
       data-pdf-filename="Overview"
@@ -5625,7 +5638,7 @@
     ><a href="#">
         <div class="na-navbar-padding"> Install SnapCenter Plug-in for Microsoft Exchange Server</div>
       </a>
-      <ul>
+      <ul style="display: none;">
         <li 
       data-pdf-exists="true" 
       data-pdf-filename="Installation workflow of SnapCenter Plug-in for Microsoft Exchange Server"
@@ -5690,7 +5703,7 @@
     ><a href="#">
         <div class="na-navbar-padding"> Configure CA Certificate</div>
       </a>
-      <ul>
+      <ul style="display: none;">
         <li 
       data-pdf-exists="true" 
       data-pdf-filename="Generate CA Certificate CSR file"
@@ -5755,7 +5768,7 @@
     ><a href="#">
         <div class="na-navbar-padding"> Back up Exchange resources</div>
       </a>
-      <ul>
+      <ul style="display: none;">
         <li 
       data-pdf-exists="true" 
       data-pdf-filename="Backup workflow"
@@ -5855,7 +5868,7 @@
     ><a href="#">
         <div class="na-navbar-padding"> Restore Exchange resources</div>
       </a>
-      <ul>
+      <ul style="display: none;">
         <li 
       data-pdf-exists="true" 
       data-pdf-filename="Restore workflow"
@@ -5934,7 +5947,7 @@
     ><a href="#">
         <div class="na-navbar-padding"> Protect Custom applications</div>
       </a>
-      <ul>
+      <ul style="display: none;">
         <li 
       data-pdf-exists="true" 
       data-pdf-filename="SnapCenter Custom Plug-ins"
@@ -5943,7 +5956,7 @@
     ><a href="#">
         <div class="na-navbar-padding"> SnapCenter Custom Plug-ins</div>
       </a>
-      <ul>
+      <ul style="display: none;">
         <li 
       data-pdf-exists="true" 
       data-pdf-filename="SnapCenter Custom Plug-ins overview"
@@ -6001,7 +6014,7 @@
     ><a href="#">
         <div class="na-navbar-padding"> Backup strategy for custom plug-ins</div>
       </a>
-      <ul>
+      <ul style="display: none;">
         <li 
       data-pdf-exists="true" 
       data-pdf-filename="Backup schedules of custom plug-in resources"
@@ -6031,7 +6044,7 @@
     ><a href="#">
         <div class="na-navbar-padding"> Develop a plug-in for your application</div>
       </a>
-      <ul>
+      <ul style="display: none;">
         <li 
       data-pdf-exists="true" 
       data-pdf-filename="Overview"
@@ -6075,7 +6088,7 @@
     ><a href="#">
         <div class="na-navbar-padding"> Prepare to install SnapCenter Custom Plug-ins</div>
       </a>
-      <ul>
+      <ul style="display: none;">
         <li 
       data-pdf-exists="true" 
       data-pdf-filename="Installation workflow of SnapCenter Custom Plug-ins"
@@ -6126,7 +6139,7 @@
     ><a href="#">
         <div class="na-navbar-padding"> Install the SnapCenter Custom Plug-ins</div>
       </a>
-      <ul>
+      <ul style="display: none;">
         <li 
       data-pdf-exists="true" 
       data-pdf-filename="Add hosts and install plug-in packages on remote hosts"
@@ -6163,7 +6176,7 @@
     ><a href="#">
         <div class="na-navbar-padding"> Configure CA Certificate</div>
       </a>
-      <ul>
+      <ul style="display: none;">
         <li 
       data-pdf-exists="true" 
       data-pdf-filename="Generate CA Certificate CSR file"
@@ -6221,7 +6234,7 @@
     ><a href="#">
         <div class="na-navbar-padding"> Prepare for data protection</div>
       </a>
-      <ul>
+      <ul style="display: none;">
         <li 
       data-pdf-exists="true" 
       data-pdf-filename="Prerequisites for using the SnapCenter Custom Plug-ins"
@@ -6244,7 +6257,7 @@
     ><a href="#">
         <div class="na-navbar-padding"> Back up custom plug-in resources</div>
       </a>
-      <ul>
+      <ul style="display: none;">
         <li 
       data-pdf-exists="true" 
       data-pdf-filename="Back up workflow"
@@ -6330,7 +6343,7 @@
     ><a href="#">
         <div class="na-navbar-padding"> Restore custom plug-in resources</div>
       </a>
-      <ul>
+      <ul style="display: none;">
         <li 
       data-pdf-exists="true" 
       data-pdf-filename="Restore workflow"
@@ -6367,7 +6380,7 @@
     ><a href="#">
         <div class="na-navbar-padding"> Clone custom plug-in resource backups</div>
       </a>
-      <ul>
+      <ul style="display: none;">
         <li 
       data-pdf-exists="true" 
       data-pdf-filename="Clone workflow"
@@ -6404,7 +6417,7 @@
     ><a href="#">
         <div class="na-navbar-padding"> Manage SnapCenter Server and plug-ins</div>
       </a>
-      <ul>
+      <ul style="display: none;">
         <li 
       data-pdf-exists="true" 
       data-pdf-filename="View dashboard"
@@ -6413,7 +6426,7 @@
     ><a href="#">
         <div class="na-navbar-padding"> View dashboard</div>
       </a>
-      <ul>
+      <ul style="display: none;">
         <li 
       data-pdf-exists="true" 
       data-pdf-filename="Overview of dashboard"
@@ -6541,7 +6554,7 @@
     ><a href="#">
         <div class="na-navbar-padding"> Upgrade SnapCenter Server and plug-ins</div>
       </a>
-      <ul>
+      <ul style="display: none;">
         <li 
       data-pdf-exists="true" 
       data-pdf-filename="Configure SnapCenter to check for available updates"
@@ -6578,7 +6591,7 @@
     ><a href="#">
         <div class="na-navbar-padding"> Uninstall SnapCenter Server and plug-ins</div>
       </a>
-      <ul>
+      <ul style="display: none;">
         <li 
       data-pdf-exists="true" 
       data-pdf-filename="Uninstall SnapCenter plug-in packages"
@@ -6587,7 +6600,7 @@
     ><a href="#">
         <div class="na-navbar-padding"> Uninstall SnapCenter plug-in packages</div>
       </a>
-      <ul>
+      <ul style="display: none;">
         <li 
       data-pdf-exists="true" 
       data-pdf-filename="Prerequisites for removing a host"
@@ -6645,7 +6658,7 @@
     ><a href="#">
         <div class="na-navbar-padding"> Automate using REST APIs</div>
       </a>
-      <ul>
+      <ul style="display: none;">
         <li 
       data-pdf-exists="true" 
       data-pdf-filename="Overview of REST APIs"
@@ -6696,7 +6709,7 @@
     ><a href="#">
         <div class="na-navbar-padding"> Supported REST APIs</div>
       </a>
-      <ul>
+      <ul style="display: none;">
         <li 
       data-pdf-exists="true" 
       data-pdf-filename="REST APIs supported for SnapCenter Server and plug-ins"
@@ -6743,6 +6756,7 @@
 </script>
 <!-- this highlights the active parent class in the navgoco sidebar. this is critical so that the parent expands when you're viewing a page. This must appear below the sidebar code above. Otherwise, if placed inside customscripts.js, the script runs before the sidebar code runs and the class never gets inserted.-->
 <script>$("li.active").parents('li').toggleClass("active");</script>
+<script>$("#mysidebar li.active").parents('ul').css("display","block");</script>
 
 
   </div>
@@ -6874,11 +6888,7 @@
         <div class="n-footer__copyright">
           <ul class="n-footer__copyright-list">
             <li class="n-footer__copyright-link">
-              <span class="n-footer__fine-print">Have feedback for our website?</span>
-              <a target="_self" href="javascript:netapp_mailto()">Let us know</a>
-            </li>
-            <li class="n-footer__copyright-link">
-              <a href="https://docs.netapp.com/us-en/announcements/">Announcements</a>
+              <a target="_self" href="javascript:netapp_mailto()">Send feedback about this page</a>
             </li>
           </ul>
         </div>
