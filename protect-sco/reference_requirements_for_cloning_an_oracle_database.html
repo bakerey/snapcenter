@@ -6796,7 +6796,7 @@
 <p class="page-details">
   
     
-    <time datetime="2022-07-19 08:02:09 +0000">07/19/2022</time>
+    <time datetime="2022-10-27 17:17:31 +0000">10/27/2022</time>
     
   
 
@@ -6806,6 +6806,14 @@
           alt="netapp-nsriram"
           width="20" height="20"
           src="https://avatars.githubusercontent.com/u/64957347?v=4"
+          style="border-radius: 50%;"/>
+  </a>
+  
+  <a target="_blank" class="ext-link-indicator" href="https://github.com/netapp-soumikd">
+    <img  class="avatar avatar-small"
+          alt="netapp-soumikd"
+          width="20" height="20"
+          src="https://avatars.githubusercontent.com/u/64966556?v=4"
           style="border-radius: 50%;"/>
   </a>
   
@@ -6910,7 +6918,7 @@
 <p>The protection type for the data LUN and the log LUN, such as mirror, vault, or mirror-vault, should be the same to discover secondary locators during cloning to an alternate host using log backups.</p>
 </li>
 <li>
-<p>You should set the value of exclude_seed_cdb_view to FALSE in the source database parameter file to retrieve seed PDB related information for cloning a backup of 12<em>c</em> database.</p>
+<p>You should set the value of exclude_seed_cdb_view to FALSE in the source database parameter file to retrieve seed PDB related information for cloning a backup of 12_c_ database.</p>
 <div class="paragraph">
 <p>The seed PDB is a system-supplied template that the CDB can use to create PDBs. The seed PDB is named PDB$SEED. For information about PDB$SEED, see the Oracle Doc ID 1940806.1.</p>
 </div>
@@ -6921,7 +6929,7 @@
 <img src="/us-en/snapcenter/images/note.svg" alt="Note">
 </td>
 <td class="content">
-You should set the value before backing up 12<em>c</em> database.
+You should set the value before backing up 12_c_ database.
 </td>
 </tr>
 </table>
@@ -6962,18 +6970,13 @@ You can manually register the new cloned mount points with the autofs subsystem.
 <div class="paragraph">
 <p>If the file does not exist, you should create the file as shown in the example below:</p>
 </div>
-<div class="paragraph">
-<p><em>blacklist {</em></p>
-</div>
 <div class="literalblock">
 <div class="content">
-<pre># You can add comments by using the ‘#’ at the beginning of the line
+<pre>blacklist {
 nn-0x&lt;target_node_name_1&gt;:pn-0x&lt;target_port_name_1&gt;
-nn-0x&lt;target_node_name_2&gt;:pn-0x&lt;target_port_name_2&gt;</pre>
+nn-0x&lt;target_node_name_2&gt;:pn-0x&lt;target_port_name_2&gt;
+}</pre>
 </div>
-</div>
-<div class="paragraph">
-<p><em>}</em></p>
 </div>
 </li>
 </ul>
